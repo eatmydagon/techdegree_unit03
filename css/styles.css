@@ -1,0 +1,211 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* ========================================================
+=========================FONT STYLES ====================
+============================================================== */
+
+html {
+  font-family: "Merriweather", serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+.header_name {
+  font-size: 1.3rem;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.banner_name {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.contact_info legend,
+.newsletter_options legend {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.banner_content,
+.footer p {
+  font-size: 0.9rem;
+  color: #919594;
+  line-height: 1.4rem;
+}
+
+label,
+.flex2 p {
+  font-size: 0.9rem;
+  color: #4F5252;
+}
+
+button {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
+}
+
+.banner,
+.footer {
+  text-align: center;
+}
+
+.footer p {
+  font-style: italic;
+}
+
+input,
+textarea {
+  font-size: 0.8rem;
+  color: #4F5252;
+  line-height: 1.2rem;
+}
+
+input::placeholder {
+  color: rgba(145, 149, 148, 0.6);
+  text-align: right;
+  font-style: italic;
+}
+
+/* ========================================================
+========================= LAYOUT AND OTHER STYLES ====================
+============================================================== */
+
+main,
+.footer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+
+/* ======================== HEADER ==========================
+============================================================== */
+
+.header {
+  background-color: #4A5C6D;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.header_name {
+  margin: 0 auto;
+}
+
+/* ======================== MAIN ==========================
+============================================================== */
+
+.banner {
+  border-bottom: solid 3px black;
+  padding: 20px 10px;
+  margin-bottom: 5px;
+}
+
+.container {
+  border-top: solid 2px grey;
+  padding: 10px 0;
+}
+
+.contact_info,
+.newsletter_options {
+  border: none;
+  padding: 10px 0;
+}
+
+.contact_info legend,
+.newsletter_options legend {
+  padding: 10px 0;
+}
+
+.flex1,
+.flex2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flex1 > input,
+.flex1 > select,
+.flex2 > textarea {
+  margin: 5px 0;
+  padding: 15px;
+  border-radius: 4px;
+  border: none;
+  background: rgba(220, 224, 227, .6);
+}
+
+.flex1 > input:focus,
+.flex1 > select:focus,
+.flex2 > textarea:focus {
+  outline: none;
+  border-bottom: solid 4px #42BBAA;
+}
+
+input::placeholder {
+  padding-right: 15px;
+}
+
+.flex1 > label {
+  margin-top: 15px;
+  padding: 5px 0;
+  width: 100%;
+}
+
+.flex1 input:nth-of-type(-1n+5),
+.flex1 select,
+.flex2 textarea {
+  width: 100%;
+}
+
+.flex1 > input[id="zipcode"] {
+  width: 50%;
+}
+
+.flex2 input {
+  margin-right: 10px;
+  width: 6%;
+}
+
+.flex2 label:nth-of-type(-1n+5) {
+  width: 90%;
+  padding: 0;
+  margin: 5px 0;
+}
+
+.flex2 p {
+  width: 100%;
+  margin: 15px 0 5px;
+  padding: 5px 0;
+}
+
+.flex2 label:nth-of-type(6) {
+  margin: 20px 0 5px;
+}
+
+textarea {
+  resize: none;
+}
+
+button[type="submit"] {
+  width: 100%;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px rgba(0,0,0, .29),
+              inset 1px 1px 1px rgba(255,255,255, .44);
+  border: none;
+  padding: 10px 10px;
+  background: #42BBAA;
+}
+
+.footer p {
+  margin: 3rem 0;
+}
