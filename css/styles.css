@@ -64,28 +64,42 @@ button {
 }
 
 input,
-textarea {
+textarea,
+select {
   font-size: 0.8rem;
   color: #4F5252;
   line-height: 1.2rem;
 }
 
 input::placeholder {
-  color: rgba(145, 149, 148, 0.6);
+  color: rgba(145, 149, 148, 0.9);
   text-align: right;
   font-style: italic;
+}
+
+textarea::placeholder {
+  color: rgba(145, 149, 148, 0.9);
+  text-align: left;
+  font-style: italic;
+}
+
+.required {
+  color: red;
 }
 
 /* ========================================================
 ========================= LAYOUT AND OTHER STYLES ====================
 ============================================================== */
 
-main,
-.footer {
+/* ======================== PAGE ==========================
+============================================================== */
+
+.banner,
+.newsletter_signup {
   width: 90%;
+  max-width: 500px;
   margin: 0 auto;
 }
-
 
 
 /* ======================== HEADER ==========================
@@ -104,10 +118,15 @@ main,
 /* ======================== MAIN ==========================
 ============================================================== */
 
+main {
+  padding-bottom: 1.5rem;
+  background: rgba(251, 216, 183, 0.2);
+}
+
 .banner {
   border-bottom: solid 3px black;
   padding: 20px 10px;
-  margin-bottom: 5px;
+  margin-bottom: 3px
 }
 
 .container {
@@ -134,41 +153,69 @@ main,
   flex-wrap: wrap;
 }
 
-.flex1 > input,
-.flex1 > select,
-.flex2 > textarea {
+.input_container {
   margin: 5px 0;
-  padding: 15px;
-  border-radius: 4px;
-  border: none;
-  background: rgba(220, 224, 227, .6);
+  border-radius: 5px;
+  position: relative;
+  background: rgba(220, 224, 227, 0.6);
+  border-bottom: 3px solid grey;
 }
 
-.flex1 > input:focus,
-.flex1 > select:focus,
-.flex2 > textarea:focus {
+.input_container:nth-of-type(-1n+6) {
+  width: 100%;
+}
+
+.input_container:nth-of-type(7) {
+  width: 50%;
+}
+
+.input_container > input,
+.input_container > select,
+.input_container > textarea {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  transition: background 400ms ease-in;
+}
+
+.border {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  border-bottom: 3px solid #42BBAA;
+  border-radius: 5px;
+  transition: width 600ms ease-in-out;
+}
+
+input:focus + .border,
+select:focus + .border,
+textarea:focus + .border {
+  width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus  {
+  background: rgba(220, 224, 227, 1);
   outline: none;
-  border-bottom: solid 4px #42BBAA;
 }
 
 input::placeholder {
   padding-right: 15px;
 }
 
+label {
+  cursor: pointer;
+}
+
 .flex1 > label {
   margin-top: 15px;
   padding: 5px 0;
   width: 100%;
-}
-
-.flex1 input:nth-of-type(-1n+5),
-.flex1 select,
-.flex2 textarea {
-  width: 100%;
-}
-
-.flex1 > input[id="zipcode"] {
-  width: 50%;
 }
 
 .flex2 input {
@@ -206,6 +253,14 @@ button[type="submit"] {
   background: #42BBAA;
 }
 
-.footer p {
-  margin: 3rem 0;
+button:hover {
+  cursor: pointer;
+}
+
+/* ======================== FOOTER ==========================
+============================================================== */
+
+footer {
+  padding: 2rem 0;
+  background: rgba(251, 216, 183, 0.2);
 }

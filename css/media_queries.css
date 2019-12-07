@@ -1,0 +1,25 @@
+
+
+
+
+@media only screen and (min-width: 768px) {
+  .banner,
+  .newsletter_signup {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto 3px;
+  }
+  .flex1 > label {
+    width: 25%;
+    margin: 0;
+  }
+  .input_container:nth-of-type(-1n+6) {
+    width: 75%;
+  }
+  .input_container:nth-of-type(7) {
+    width: 30%;
+  }
+  .flex2 .input_container {
+    width: 100%;
+  }
+}
